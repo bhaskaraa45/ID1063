@@ -17,7 +17,9 @@ void addition(complex *c){
     arr[0]=c[0].re+c[1].re;
     arr[1]=c[0].img+c[1].img;
     char ch='+';
-    arr[1]<0? ch='-':1;
+    if(arr[1]<0){
+    ch='-'; arr[1] *= (-1);
+    }
 
     printf("Sum :\t%.2f %c i %.2f",arr[0],ch,arr[1]);
 }    
@@ -27,7 +29,9 @@ void substraction(complex *c){
     arr[0]=c[0].re-c[1].re;
     arr[1]=c[1].img-c[1].img;
     char ch='+';
-    arr[1]<0? ch='-':1;
+    if(arr[1]<0){
+    ch='-'; arr[1] *= (-1);
+     }
     
     printf("Substraction :\t%.2f %c i %.2f",arr[0],ch,arr[1]);
     
@@ -38,7 +42,9 @@ void multiplication(complex *c){
     arr[0]=c[0].re*c[1].re - c[0].img*c[1].img;
     arr[1]=c[0].img*c[1].re + c[1].img*c[0].re;
     char ch='+';
-    arr[1]<0? ch='-':1;
+    if(arr[1]<0){
+    ch='-'; arr[1] *= (-1);
+    }
 
     printf("Multiplaction :\t%.2f %c i %.2f",arr[0],ch,arr[1]);
     
